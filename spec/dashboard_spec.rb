@@ -5,7 +5,6 @@ describe Dashboard do
   describe "#posts" do
     it "returns posts visible to the current user" do
       user          = create(:user)
-      other_user    = create(:user)
       visible_posts = double("visible_posts")
       dashboard     = Dashboard.new(posts: Post.all, user: user)
 
